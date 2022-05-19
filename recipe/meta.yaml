@@ -24,6 +24,7 @@ requirements:
     - doxygen
   host:
     - boost-cpp
+    - example-robot-data
   run:
     - boost-cpp
 
