@@ -22,13 +22,19 @@ requirements:
     - make
     - pkg-config
     - doxygen
+    - hpp-fcl  1.8.1                         # [build_platform != target_platform]
+    - pinocchio                              # [build_platform != target_platform]
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - boost-cpp
     - python
     - example-robot-data
+    - hpp-fcl  1.8.1
+    - pinocchio
   run:
+    - {{ pin_compatible('hpp-fcl', max_pin='x.x.x') }}
+    - {{ pin_compatible('pinocchio', max_pin='x.x.x') }}
     - boost-cpp
     - python
     - example-robot-data
