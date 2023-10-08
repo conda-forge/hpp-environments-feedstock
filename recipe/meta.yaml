@@ -27,7 +27,7 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
-    - libboost-devel
+    - libboost-headers
     - python
     - example-robot-data
     - hpp-fcl
