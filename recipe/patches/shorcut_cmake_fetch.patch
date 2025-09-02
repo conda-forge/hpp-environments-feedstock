@@ -1,0 +1,35 @@
+From 7cc8cbf6103ac4b00dc680d0f6ebc9732d89bfec Mon Sep 17 00:00:00 2001
+From: Yann MontMarin <yann.montmarin@gmail.com>
+Date: Tue, 2 Sep 2025 17:44:15 +0200
+Subject: [PATCH] Shortcut cmake fetch
+
+Update cmake minimum
+---
+ CMakeLists.txt | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+diff --git CMakeLists.txt CMakeLists.txt
+index 00931a4..dd5ba44 100644
+--- CMakeLists.txt
++++ CMakeLists.txt
+@@ -11,7 +11,7 @@
+ # details.  You should have received a copy of the GNU Lesser General Public
+ # License along with this file.  If not, see <http://www.gnu.org/licenses/>.
+
+-cmake_minimum_required(VERSION 3.10)
++cmake_minimum_required(VERSION 3.22)
+
+ set(PROJECT_NAME hpp-environments)
+ set(PROJECT_DESCRIPTION "Environments for the humanoid path planner platform.")
+@@ -49,7 +49,8 @@ else()
+     include(FetchContent)
+     FetchContent_Declare(
+       "jrl-cmakemodules"
+-      GIT_REPOSITORY "https://github.com/jrl-umi3218/jrl-cmakemodules.git")
++      GIT_REPOSITORY "https://github.com/nim65s/jrl-cmakemodules.git"
++      GIT_TAG "cmake41")
+     FetchContent_MakeAvailable("jrl-cmakemodules")
+     FetchContent_GetProperties("jrl-cmakemodules" SOURCE_DIR JRL_CMAKE_MODULES)
+   endif()
+--
+2.39.5 (Apple Git-154)
