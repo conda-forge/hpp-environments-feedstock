@@ -1,0 +1,25 @@
+From 8917576d6508a488cce6e4e72b26c5f60dc1f42e Mon Sep 17 00:00:00 2001
+From: Yann MontMarin <yann.montmarin@gmail.com>
+Date: Tue, 2 Sep 2025 17:44:15 +0200
+Subject: [PATCH] Shortcut cmake fetch
+
+---
+ CMakeLists.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git CMakeLists.txt CMakeLists.txt
+index 00931a4..0c2bb60 100644
+--- CMakeLists.txt
++++ CMakeLists.txt
+@@ -49,7 +49,8 @@ else()
+     include(FetchContent)
+     FetchContent_Declare(
+       "jrl-cmakemodules"
+-      GIT_REPOSITORY "https://github.com/jrl-umi3218/jrl-cmakemodules.git")
++      GIT_REPOSITORY "https://github.com/nim65s/jrl-cmakemodules.git"
++      GIT_TAG "cmake41")
+     FetchContent_MakeAvailable("jrl-cmakemodules")
+     FetchContent_GetProperties("jrl-cmakemodules" SOURCE_DIR JRL_CMAKE_MODULES)
+   endif()
+--
+2.39.5 (Apple Git-154)
