@@ -8,8 +8,6 @@ package:
 source:
   url: https://github.com/humanoid-path-planner/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: 6045b0711f5b55480d4e32f3b104d25bc262d4b1a4f0f3c6a239baa97bc6536a
-  patches:
-    - patches/shorcut_cmake_fetch.patch
 
 build:
   number: 0
