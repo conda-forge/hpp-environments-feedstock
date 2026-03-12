@@ -1,5 +1,5 @@
 {% set name = "hpp-environments" %}
-{% set version = "6.1.0" %}
+{% set version = "7.0.0" %}
 
 package:
   name: {{ name }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/humanoid-path-planner/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 6045b0711f5b55480d4e32f3b104d25bc262d4b1a4f0f3c6a239baa97bc6536a
+  sha256: 905f92474686d1c1f7a3dfa15f3cfecb250be250676a26fd5f5dd01a4d06fc65
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win or python_impl == 'pypy']
   run_exports:
     - {{ pin_subpackage(name|lower, max_pin='x.x.x') }}
